@@ -72,6 +72,6 @@ async def android_websocket_endpoint(_android_websocket: WebSocket):
         # Abdi, we can run code here
         try:
             await browser_websocket.send_text(data)
-            await android_websocket.send_text(f"SENT TO ANDROID: {data}")
+            await android_websocket.send_text(f"SENT TO BROWSER: {data}")
         except NameError:
-            await android_websocket.send_text(f"NOT SENT TO ANDROID: {data}")
+            await android_websocket.send_text(f"NOT SENT TO BROWSER: {data}")
